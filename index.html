@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Matrices</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Matrices</h1>
+        
+        <!-- Configuración de Dimensiones -->
+        <div class="control-panel">
+            <div class="control-group">
+                <label for="rows">Filas:</label>
+                <input type="number" id="rows" min="1" max="5" value="3">
+            </div>
+            <div class="control-group">
+                <label for="cols">Columnas:</label>
+                <input type="number" id="cols" min="1" max="5" value="3">
+            </div>
+            <button id="btn-generate" onclick="generateMatrices()">Generar Matrices</button>
+        </div>
+
+        <!-- Área de Matrices -->
+        <div class="matrices-container">
+            <div class="matrix-box">
+                <h3>Matriz A</h3>
+                <div id="matrix-A" class="matrix-grid"></div>
+            </div>
+            
+            <div class="matrix-box">
+                <h3>Matriz B</h3>
+                <div id="matrix-B" class="matrix-grid"></div>
+            </div>
+        </div>
+
+        <!-- Botones de Operaciones -->
+        <div class="operations-panel">
+            <button onclick="calculate('add')">A + B</button>
+            <button onclick="calculate('subtract')">A - B</button>
+            <button onclick="calculate('multiply')">A × B</button>
+            <button onclick="unilateral('detA')">Det(A)</button>
+            <button onclick="unilateral('invA')">Inversa(A)</button>
+            <button onclick="clearAll()">Limpiar</button>
+        </div>
+
+        <!-- Panel de Resultados -->
+        <div class="result-panel">
+            <h3>Resultado</h3>
+            <div id="result-content">Los resultados aparecerán aquí.</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
