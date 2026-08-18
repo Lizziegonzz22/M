@@ -1,0 +1,133 @@
+:root {
+    --primary: #2563eb;
+    --primary-hover: #1d4ed8;
+    --bg: #f8fafc;
+    --card-bg: #ffffff;
+    --text: #1e293b;
+    --border: #e2e8f0;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 900px;
+    width: 100%;
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+}
+
+h1, h3 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.control-panel {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    background: var(--bg);
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.control-group input {
+    width: 50px;
+    padding: 8px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    text-align: center;
+}
+
+button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background-color: var(--primary-hover);
+}
+
+.matrices-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 600px) {
+    .matrices-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.matrix-box {
+    background: var(--bg);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+}
+
+.matrix-grid {
+    display: grid;
+    gap: 8px;
+    justify-content: center;
+}
+
+.matrix-grid input {
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.operations-panel {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.result-panel {
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    padding: 20px;
+    border-radius: 8px;
+    min-height: 80px;
+}
+
+.matrix-result {
+    display: inline-grid;
+    gap: 8px;
+    padding: 10px;
+    border-left: 2px solid var(--text);
+    border-right: 2px solid var(--text);
+    border-radius: 6px;
+}
+
+.matrix-result span {
+    width: 60px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+}
